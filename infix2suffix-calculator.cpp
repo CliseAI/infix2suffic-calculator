@@ -3,7 +3,7 @@
 using namespace std;
 //Ari's Group Code
 
-int Operator(char opt) {
+int Operator(char opt) { // A Function which return the priority of the Operator
 	if (opt == '^')
 		return 3;
 	else if ((opt == '/' || opt == '*') || opt == '%')
@@ -13,7 +13,7 @@ int Operator(char opt) {
 	else
 		return -1;
 }
-string delspace(string n){
+string delspace(string n){ //A Function for removing all whitespaces
   string nospace;
   for(int i = 0; i < n.length(); i++){
     char num = n[i];
@@ -26,7 +26,7 @@ string delspace(string n){
   }
   return nospace;
 }
-string infix2suffix(string n){
+string infix2suffix(string n){ //A Function that convert Infix to Suffix
   stack<char> formula;
   string ans;
   string space = " ";
@@ -65,7 +65,7 @@ string infix2suffix(string n){
   return ans;
 }
 
-double evaluate(string n){
+double evaluate(string n){ //A Function that evaluate the Suffix
   double op1, op2, ans;
   stack<double> calcu;
   int i = 0;
